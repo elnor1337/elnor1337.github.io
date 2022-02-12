@@ -127,7 +127,7 @@ img {
 #Welcome{
   z-index: 0;
   text-align:center;
-  background-image:url('Lol\ BG.jpg');
+  background-image:url('websiteBG.png');
   background-repeat: no-repeat;
   background-size:cover;
   display:block;
@@ -212,7 +212,7 @@ img {
 }
 
 .box_one{
-  background-image:url(MidWorks\ Logo.png);
+  background-image:url(OneToEightLogo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -227,7 +227,7 @@ img {
 }
     
 .box_two{
-  background-image:url(MidWorks\ Logo.png);
+  background-image:url(OneToEightLogo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -246,7 +246,7 @@ img {
 }
     
 .box_three{
-  background-image:url(MidWorks\ Logo.png);
+  background-image:url(OneToEightLogo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
