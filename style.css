@@ -168,7 +168,8 @@ img {
 #Join{
   color:white;
   text-align: center;
-  background-image: linear-gradient(#232526, #414345);
+  background-image: linear-gradient(#08203e, #557c93);
+  /* background-image: linear-gradient(#232526, #414345); */
   /* background-image: linear-gradient(#1F1C2C, #928DAB); */
   /* background-color: #6c757d; */
   position: relative;
@@ -203,7 +204,7 @@ img {
 #About{
   color:white;
   text-align: center;
-  background-image: linear-gradient(#2980B9, #6DD5FA);
+  background-image: linear-gradient(#6DD5FA, #2980B9);
   /* background-color: #8db5d8; */
   position: relative;
   overflow:auto;
