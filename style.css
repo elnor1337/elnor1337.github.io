@@ -29,7 +29,7 @@ a:hover {
   text-decoration: underline;
 }
 
-#my-title{
+.my-title{
   color: black;
   background: linear-gradient(
     90deg,transparent 0,hsla(0,0%,100%,.5) 25%,hsla(0,0%,100%,.5) 75%,transparent);
@@ -184,7 +184,7 @@ img {
   padding-bottom: 40px;
 }
 
-.button_join{
+/* .button_join{
   font-size: 24px;
   text-align: center;
   background-color: #51c755;
@@ -199,6 +199,46 @@ img {
 .button_join:hover{
   background-color: white;
   border: 3px solid #51c755;
+} */
+.button_join {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_join span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_join span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 4px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_join:hover span {
+  padding-right: 25px;
+}
+
+.button_join:hover span:after {
+  opacity: 1;
+  right: 0;
+  transform: rotate(180deg);
 }
 
 #About{
