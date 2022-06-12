@@ -207,7 +207,7 @@ img {
 .button_join {
   display: inline-block;
   border-radius: 15px;
-  background-color: #f4511e;
+  background-color: #ee1717;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -238,7 +238,9 @@ img {
 .button_join:hover span {
   padding-right: 25px;
 }
-
+.button_join:hover{
+  background-color: #178aee;
+}
 .button_join:hover span:after {
   opacity: 1;
   right: 0;
