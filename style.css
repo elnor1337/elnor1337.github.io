@@ -1,4 +1,8 @@
 /* <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe> */
+*{
+  box-sizing: border-box;
+}
+
 body{
   text-shadow:2px 2px rgb(32, 32, 32);
   font-family: 'Oswald', sans-serif;
