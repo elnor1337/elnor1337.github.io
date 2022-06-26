@@ -6,6 +6,7 @@ html{
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  height:100%;
 }
 body{
   text-shadow:2px 2px rgb(32, 32, 32);
@@ -18,7 +19,7 @@ body{
   margin: 0;
   padding: 0;
   border: 0;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -68,6 +69,7 @@ a:hover {
   flex-wrap: wrap;
   width: 100%;
   z-index: 30000;
+  align-items:center;
 }
 
 .ourLogo{
@@ -124,6 +126,8 @@ a:hover {
 }
 
 .Welcome{
+  display:flex;
+  background-image:url('websiteBG.png');
   text-align:center;
   background-repeat: no-repeat;
   background-size:cover;
@@ -134,7 +138,6 @@ a:hover {
   min-height: 100%;
   min-width: 100%;
   position: relative;
-  display: flex;
   -ms-flex-align: center;
   align-items: center;
   z-index: -1000;
@@ -480,7 +483,10 @@ a:hover {
   background-color:#0b0b0b;
   color:#0b0b0b;
   height:1px;
+}
 
+h4{
+  margin:20px;
 }
 /* .ending-logo{
   display:block;
