@@ -9,6 +9,7 @@
 # General
 --------------------------------------------------------------*/
 
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -700,9 +701,25 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.game-image{
+  border-radius: 3%;
+  outline: solid 1px black;
+  transition: outline 0.6s linear;
+  margin: 0.5em;
+}
+
+.game-image:hover{
+  outline-width: 5px;
+}
+
+.img-fluid{ 
+  /* transition: border-width 0.2s linear; */
+  border-radius: 3%;
+  transition: outline 0.6s linear;
+ }
+ 
 .services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
@@ -1313,7 +1330,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #8577fb;
+  color: #e66063;
 }
 
 .faq .faq-list .icon-show,
@@ -1334,7 +1351,7 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #2c4964;
+  color: #e66063;
 }
 
 .faq .faq-list a.collapsed:hover {
