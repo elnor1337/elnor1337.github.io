@@ -200,13 +200,105 @@
   /**
    * Porfolio isotope and filter
    */
+  // for portfolio details
+
+  const portfolioItems = [
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/AspenImage.png',
+      title: 'Aspen and Orphanage Pixel art',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/aspen_initial.png', 
+      title: 'Initial Aspen Design',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/mature_aspen.png',
+      title: 'Mature Aspen',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/Aspen_poses.png',
+      title: 'Aspen Poses',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/Aspen_running.gif',
+      title: 'Running Animation',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-card',
+      image: 'assets/img/portfolio/bosses_sketch.png',
+      title: 'Bosses Sketch',
+      subtitle: 'Aspen Bosses',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/Aspen_face.png',
+      title: 'Aspen Face',
+      subtitle: 'Aspen',
+    },
+    {
+      category: 'filter-app',
+      image: 'assets/img/portfolio/mini_aspen.png',
+      title: 'Mini Aspen',
+      subtitle: 'Aspen',
+    }
+  ];
+
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
+      // Clear container first
+      portfolioContainer.innerHTML = '';
+      
+      // Render portfolio items
+      portfolioItems.forEach(item => {
+        const portfolioHTML = `
+          <div class="col-lg-4 col-md-6 portfolio-item ${item.category}">
+            <div class="portfolio-wrap">
+              <img src="${item.image}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>${item.title}</h4>
+                <p>${item.subtitle}</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="${item.image}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${item.title}">
+                  <i class="bx bx-plus"></i>
+                </a>
+                <a href="portfolio-details.html" title="More Details">
+                  <i class="bx bx-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        portfolioContainer.insertAdjacentHTML('beforeend', portfolioHTML);
+      });
+  
+      // Initialize Isotope after adding items
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry',
+        masonry: {
+          columnWidth: '.portfolio-item',
+          horizontalOrder: true
+        },
+        percentPosition: true
       });
 
+      // Force layout after initialization
+      setTimeout(() => {
+        portfolioIsotope.layout();
+      }, 100);
+      
       let portfolioFilters = select('#portfolio-flters li', true);
 
       on('click', '#portfolio-flters li', function(e) {
